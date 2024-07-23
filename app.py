@@ -39,10 +39,23 @@ def generate_gemini_content(transcript_text, prompt):
 
 # Custom CSS for better UI
 st.markdown(
+
     """
     <style>
+[data-testid="stAppViewBlockContainer"] {
+    background-color: #fefbd8;
+    padding: 100px;
+    padding-top: 100px;
+    margin-top: 150px;
+    border-radius: 2%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5), 0px 8px 16px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.1); /* Adding multiple shadows */
+}
     .main {
-        background-color: black;
+        background-color: white;
+    }
+    .st.text_input{
+    color:white;
+    background-color :white;
     }
     .stSlider {
         color: #4CAF50;
@@ -50,13 +63,29 @@ st.markdown(
     .stButton button {
         background-color: #4CAF50;
         color: white;
+        }
+    h1#youtube-transcript-to-detailed-notes-converter {
+        color: #FF0000; 
+        text-align: center;
+
+
+    }
+    [data-testid="stMarkdownContainer"]{
+    color : black;
+    font-size: 18px; 
+
     }
     </style>
+
+
+
     """,
     unsafe_allow_html=True,
 )
 
 # App title
+st.image('pngwing.com.png')
+
 st.title("YouTube Transcript to Detailed Notes Converter")
 
 # Sidebar for navigation
@@ -64,10 +93,9 @@ st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Choose a page", ["Home"])
 
 if page == "Home":
-    st.header("Home")
 
     # YouTube video link input
-    youtube_link = st.text_input("Enter YouTube Video Link:")
+    youtube_link = st.text_input("Enter YouTube Video Link: ")
 
     if youtube_link:
         video_id = youtube_link.split("=")[1]
