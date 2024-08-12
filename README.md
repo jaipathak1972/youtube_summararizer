@@ -24,9 +24,10 @@
 - python-dotenv
 
 
-#your-repo-name/
+```
 │
 ├── app.py               # Main application file
 ├── .env                 # Environment variables file
 ├── requirements.txt     # List of required packages
 └── README.md            # Project documentation
+```
