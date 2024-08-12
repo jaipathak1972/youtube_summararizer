@@ -2,6 +2,7 @@
 
 ## This project is a Streamlit web application that converts YouTube video transcripts into detailed notes. The application uses the `YouTubeTranscriptApi` to fetch transcripts and Google Generative AI to summarize the content.
 
+![Untitled design](https://github.com/user-attachments/assets/e9eab560-58bf-4a3e-adaf-e8ce62cceed4)
 
 
 ![image](https://github.com/user-attachments/assets/7067a806-2615-442b-ba81-96b5e19aef0d)
